@@ -1,0 +1,11 @@
+{
+    "name": "webedit/home",
+    "require": {
+        "webedit/application": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebEdit\\": "src/"
+        }
+    }
+}
