@@ -1,7 +1,6 @@
 {
     "name": "webedit/home",
     "require": {
-        "webedit/core": "dev-master",
         "webedit/application": "dev-master"
     },
     "autoload": {
