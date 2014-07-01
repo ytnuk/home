@@ -2,8 +2,8 @@
 
 namespace WebEdit\Home;
 
-use WebEdit\Application;
+use WebEdit\Front;
 
-final class Presenter extends Application\Front\Presenter {
+final class Presenter extends Front\Presenter {
     
 }

@@ -1,7 +1,9 @@
 {
     "name": "webedit/home",
     "require": {
-        "webedit/application": "dev-master"
+        "webedit/front": "dev-master",
+        "webedit/admin": "dev-master",
+        "webedit/menu": "dev-master"
     },
     "autoload": {
         "psr-4": {
