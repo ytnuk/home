@@ -1,9 +1,10 @@
 {
     "name": "webedit/home",
     "require": {
+        "webedit/bootstrap": "dev-master",
+        "webedit/routing": "dev-master",
         "webedit/front": "dev-master",
-        "webedit/admin": "dev-master",
-        "webedit/menu": "dev-master"
+        "webedit/admin": "dev-master"
     },
     "autoload": {
         "psr-4": {
