@@ -4,6 +4,7 @@ namespace WebEdit\Home\Admin;
 
 use WebEdit\Admin;
 
-final class Presenter extends Admin\Presenter {
-    
+final class Presenter extends Admin\Presenter
+{
+
 }
