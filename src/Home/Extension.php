@@ -4,8 +4,9 @@ namespace WebEdit\Home;
 
 use WebEdit\Module;
 use WebEdit\Routing;
+use WebEdit\Translation;
 
-final class Extension extends Module\Extension implements Routing\Provider
+final class Extension extends Module\Extension implements Routing\Provider, Translation\Provider
 {
 
     public function getRoutingResources()
