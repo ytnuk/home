@@ -1,4 +1,5 @@
 admin:
-    view: Administrace
-front:
-    view: Titulní strana
+    presenter:
+        module: Administrace
+presenter:
+    module: Titulní strana

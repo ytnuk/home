@@ -13,10 +13,18 @@ final class Extension extends Module\Extension implements Routing\Provider, Tran
     {
         return [
             'routes' => [
-                '[<locale [a-z]{2}(_[A-Z]{2})?>/]<module [a-z.]+>[/<action [a-z]+>][/<id [0-9]+>]' => [
-                    'module' => 'Home:Front',
+                '[<locale [a-z]{2}(_[A-Z]{2})?>/]<module>[/<action>][/<id [0-9]+>]' => [
+                    NULL => [
+                        Routing\Route::TRANSLATE => TRUE,
+                    ],
+                    'module' => [
+                        Routing\Route::VALUE => 'Home:Front',
+                        Routing\Route::TRANSLATE => TRUE,
+                    ],
                     'presenter' => 'Presenter',
-                    'action' => 'view'
+                    'locale' => [
+                        Routing\Route::TRANSLATE => TRUE,
+                    ]
                 ]
             ]
         ];

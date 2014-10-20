@@ -1,4 +1,5 @@
 admin:
-    view: Administration
-front:
-    view: Homepage
+    presenter:
+        module: Administration
+presenter:
+    module: Homepage
