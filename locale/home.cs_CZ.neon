@@ -1,3 +1,4 @@
 admin:
     module: Administrace
-module: Titulní strana
+front:
+    module: Titulní strana
