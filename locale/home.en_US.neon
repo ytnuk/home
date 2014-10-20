@@ -1,5 +1,3 @@
 admin:
-    presenter:
-        module: Administration
-presenter:
-    module: Homepage
+    module: Administration
+module: Homepage

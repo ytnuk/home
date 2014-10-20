@@ -1,5 +1,3 @@
 admin:
-    presenter:
-        module: Administrace
-presenter:
-    module: Titulní strana
+    module: Administrace
+module: Titulní strana
