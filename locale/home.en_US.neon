@@ -1,4 +1,1 @@
-admin:
-    module: Administration
-front:
-    module: Homepage
+module: Home
