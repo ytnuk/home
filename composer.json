@@ -1,20 +1,20 @@
 {
-  "name": "webedit/home",
-  "type": "webedit-module",
-  "extra": {
-    "extensions": {
-      "home": "WebEdit\\Home\\Extension"
-    }
-  },
-  "require": {
-    "webedit/module": "dev-master",
-    "webedit/routing": "dev-master",
-    "webedit/front": "dev-master",
-    "webedit/admin": "dev-master"
-  },
-  "autoload": {
-    "psr-4": {
-      "WebEdit\\": "src/"
-    }
-  }
+	"name": "webedit/home",
+	"type": "webedit-module",
+	"extra": {
+		"extensions": {
+			"home": "WebEdit\\Home\\Extension"
+		}
+	},
+	"require": {
+		"webedit/module": "dev-master",
+		"webedit/routing": "dev-master",
+		"webedit/front": "dev-master",
+		"webedit/admin": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"WebEdit\\": "src/"
+		}
+	}
 }
