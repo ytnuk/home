@@ -1,13 +1,7 @@
 {
 	"name": "webedit/home",
-	"type": "webedit-module",
-	"extra": {
-		"extensions": {
-			"home": "WebEdit\\Home\\Extension"
-		}
-	},
 	"require": {
-		"webedit/module": "dev-master",
+		"kdyby/translation": "dev-master",
 		"webedit/routing": "dev-master",
 		"webedit/front": "dev-master",
 		"webedit/admin": "dev-master"

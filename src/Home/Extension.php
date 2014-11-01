@@ -2,31 +2,47 @@
 
 namespace WebEdit\Home;
 
-use WebEdit\Module;
+use Kdyby\Translation;
+use Nette\DI;
+use WebEdit\Config;
 use WebEdit\Routing;
-use WebEdit\Translation;
 
 /**
  * Class Extension
  *
  * @package WebEdit\Home
  */
-final class Extension extends Module\Extension implements Routing\Provider, Translation\Provider
+final class Extension extends DI\CompilerExtension implements Config\Provider
 {
 
 	/**
-	 * @return array
+	 * @var array
 	 */
-	public function getResources()
-	{
-		return ['locale' => 'en',];
-	}
+	private $defaults = [
+		'locale' => 'en'
+	];
 
 	/**
 	 * @return array
 	 */
-	public function getRoutingResources()
+	public function getConfigResources()
 	{
-		return ['routes' => ['[<locale [a-z]{2}(_[A-Z]{2})?>/]<module>[/<action>][/<id [0-9]+>]' => ['module' => 'Home:Front', 'presenter' => 'Presenter', 'action' => 'view', 'locale' => $this['locale']]]];
+		return [
+			Routing\Extension::class => [
+				'routes' => [
+					'[<locale [a-z]{2}(_[A-Z]{2})?>/]<module>[/<action>][/<id [0-9]+>]' => [
+						'module' => 'Home:Front',
+						'presenter' => 'Presenter',
+						'action' => 'view',
+						'locale' => $this->defaults['locale']
+					]
+				]
+			],
+			Translation\DI\TranslationExtension::class => [
+				'dirs' => [
+					__DIR__ . '/../../locale'
+				]
+			]
+		];
 	}
 }
