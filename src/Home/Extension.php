@@ -27,6 +27,8 @@ final class Extension extends DI\CompilerExtension implements Config\Provider
 	 */
 	public function getConfigResources()
 	{
+		$config = $this->getConfig($this->defaults);
+
 		return [
 			Routing\Extension::class => [
 				'routes' => [
@@ -34,7 +36,7 @@ final class Extension extends DI\CompilerExtension implements Config\Provider
 						'module' => 'Home:Front',
 						'presenter' => 'Presenter',
 						'action' => 'view',
-						'locale' => $this->defaults['locale']
+						'locale' => $config['locale']
 					]
 				]
 			],
