@@ -2,7 +2,7 @@
 	"name": "webedit/home",
 	"require": {
 		"kdyby/translation": "dev-master",
-		"webedit/routing": "dev-master",
+		"nette/application": "dev-master",
 		"webedit/front": "dev-master",
 		"webedit/admin": "dev-master"
 	},

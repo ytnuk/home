@@ -3,9 +3,9 @@
 namespace WebEdit\Home;
 
 use Kdyby\Translation;
+use Nette\Bridges;
 use Nette\DI;
 use WebEdit\Config;
-use WebEdit\Routing;
 
 /**
  * Class Extension
@@ -30,7 +30,7 @@ final class Extension extends DI\CompilerExtension implements Config\Provider
 		$config = $this->getConfig($this->defaults);
 
 		return [
-			Routing\Extension::class => [
+			Bridges\ApplicationDI\RoutingExtension::class => [
 				'routes' => [
 					'[<locale [a-z]{2}(_[A-Z]{2})?>/]<module>[/<action>][/<id [0-9]+>]' => [
 						'module' => 'Home:Front',
