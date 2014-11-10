@@ -1,1 +1,6 @@
-module: Home
+admin:
+	presenter:
+		module: Administration
+front:
+	presenter:
+		module: Homepage
