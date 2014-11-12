@@ -19,7 +19,13 @@ final class Extension extends DI\CompilerExtension implements Config\Provider
 	 * @var array
 	 */
 	private $defaults = [
-		'locale' => 'en'
+		'mask' => '[<locale [a-z]{2}_[A-Z]{2}?>/]<module>[/<action>][/<id [0-9]+>]',
+		'metadata' => [
+			'module' => 'Home',
+			'presenter' => 'Presenter',
+			'action' => 'view',
+			'locale' => 'en_US',
+		],
 	];
 
 	/**
@@ -28,16 +34,17 @@ final class Extension extends DI\CompilerExtension implements Config\Provider
 	public function getConfigResources()
 	{
 		$config = $this->getConfig($this->defaults);
+		$config['metadata']['web'] = $this->name;
 
 		return [
+			Bridges\ApplicationDI\ApplicationExtension::class => [
+				'mapping' => [
+					'*' => ucfirst($this->name) . '\*\*'
+				]
+			],
 			Bridges\ApplicationDI\RoutingExtension::class => [
 				'routes' => [
-					'[<locale [a-z]{2}(_[A-Z]{2})?>/]<module>[/<action>][/<id [0-9]+>]' => [
-						'module' => 'Home:Front',
-						'presenter' => 'Presenter',
-						'action' => 'view',
-						'locale' => $config['locale']
-					]
+					$config['mask'] => $config['metadata']
 				]
 			],
 			Translation\DI\TranslationExtension::class => [

@@ -1,6 +1,2 @@
-admin:
-	presenter:
-		module: Administrace
-front:
-	presenter:
-		module: Titulní strana
+presenter:
+	module: Domů
