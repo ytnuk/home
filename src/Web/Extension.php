@@ -1,6 +1,6 @@
 <?php
 
-namespace WebEdit\Home;
+namespace WebEdit\Web;
 
 use Kdyby\Translation;
 use Nette\Bridges;
@@ -10,7 +10,7 @@ use WebEdit\Config;
 /**
  * Class Extension
  *
- * @package WebEdit\Home
+ * @package WebEdit\Web
  */
 final class Extension extends DI\CompilerExtension implements Config\Provider
 {
@@ -45,11 +45,6 @@ final class Extension extends DI\CompilerExtension implements Config\Provider
 			Bridges\ApplicationDI\RoutingExtension::class => [
 				'routes' => [
 					$config['mask'] => $config['metadata']
-				]
-			],
-			Translation\DI\TranslationExtension::class => [
-				'dirs' => [
-					__DIR__ . '/../../locale'
 				]
 			]
 		];
