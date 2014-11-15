@@ -1,10 +1,7 @@
 {
 	"name": "webedit/home",
 	"require": {
-		"kdyby/translation": "dev-master",
-		"nette/application": "dev-master",
-		"webedit/front": "dev-master",
-		"webedit/admin": "dev-master"
+		"webedit/web": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
