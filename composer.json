@@ -1,11 +1,11 @@
 {
-	"name": "webedit/home",
+	"name": "kutny/home",
 	"require": {
-		"webedit/web": "dev-master"
+		"kutny/web": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
-			"WebEdit\\": "src/"
+			"Kutny\\": "src/"
 		}
 	}
 }
