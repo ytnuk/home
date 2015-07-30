@@ -1,17 +1,18 @@
 <?php
-
 namespace Ytnuk\Home;
 
+use Kdyby;
 use Nette;
 use Ytnuk;
-use Kdyby;
 
 /**
  * Class Extension
  *
  * @package Ytnuk\Home
  */
-final class Extension extends Nette\DI\CompilerExtension implements Ytnuk\Config\Provider
+final class Extension
+	extends Nette\DI\CompilerExtension
+	implements Ytnuk\Config\Provider
 {
 
 	/**
@@ -22,9 +23,9 @@ final class Extension extends Nette\DI\CompilerExtension implements Ytnuk\Config
 		return [
 			Kdyby\Translation\DI\TranslationExtension::class => [
 				'dirs' => [
-					__DIR__ . '/../../locale'
-				]
-			]
+					__DIR__ . '/../../locale',
+				],
+			],
 		];
 	}
 }
