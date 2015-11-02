@@ -3,7 +3,6 @@ namespace Ytnuk\Home;
 
 use Kdyby;
 use Nette;
-use Ytnuk;
 
 final class Extension
 	extends Nette\DI\CompilerExtension
