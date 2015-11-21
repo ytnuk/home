@@ -1,6 +1,6 @@
 {
 	"name": "ytnuk/home",
-	"type": "ytnuk/module",
+	"type": "ytnuk-module",
 	"require": {
 		"ytnuk/web": "dev-master"
 	},
