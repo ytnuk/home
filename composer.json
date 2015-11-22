@@ -2,7 +2,7 @@
 	"name": "ytnuk/home",
 	"extra": {
 		"extensions": {
-			"ytnuk/home": "Ytnuk\\Home\\Extension"
+			"ytnuk_home": "Ytnuk\\Home\\Extension"
 		}
 	},
 	"require": {
